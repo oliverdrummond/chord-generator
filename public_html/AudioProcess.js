@@ -4,6 +4,8 @@ ACORDE_MAIOR();
 //ACORDE_MENOR();
 //ACORDE_MENOR_COM_SETIMA();
 
+document.write(QUINTA_DIMINUTA);
+
 document.getElementById('volumeOscilador').addEventListener('change', function () {
     gainNode.gain.value = this.value;
 });
