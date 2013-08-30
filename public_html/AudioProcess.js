@@ -1,10 +1,11 @@
-ACORDE_MAIOR();
-//ACORDE_MAIOR_COM_SETIMA();
-//ACORDE_MAIOR_COM_SETIMA_MAIOR();
-//ACORDE_MENOR();
-//ACORDE_MENOR_COM_SETIMA();
 
-document.write(QUINTA_DIMINUTA);
+var acorde = prompt('Entre com o acorde');
+acorde = acorde.replace('#','_SUSTENIDO');
+acorde = acorde.toUpperCase()
+var frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde]);
+
+fazerBarulho();
+ACORDE_MAIOR(frequenciaDeReferencia);
 
 document.getElementById('volumeOscilador').addEventListener('change', function () {
     gainNode.gain.value = this.value;
