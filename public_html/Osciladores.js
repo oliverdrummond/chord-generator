@@ -13,10 +13,6 @@ var fazerBarulho = function() {
     window.oscillatorThree = context.createOscillator();
     window.oscillatorFour = context.createOscillator();
     var gainNode = context.createGain();
-    //
-    //oscillatorOne.frequency.value = TONICA;
-    //oscillatorTwo.frequency.value = TERCA_MENOR;
-    //oscillatorThree.frequency.value = QUINTA_JUSTA;
 
     //Conectando os osciladores na saída de áudio
     oscillatorOne.connect(gainNode);
@@ -25,7 +21,6 @@ var fazerBarulho = function() {
     oscillatorFour.connect(gainNode);
     gainNode.connect(context.destination);
 
-    
     //Ligando os osciladores
     oscillatorOne.noteOn(0);
     oscillatorTwo.noteOn(0.1);
