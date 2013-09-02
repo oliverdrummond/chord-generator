@@ -49,11 +49,19 @@ var ACORDE_MAIOR_BAIXO_NONA = function (f) {
 };
 
 var ACORDE_MAIOR_BAIXO_SETIMA_MENOR = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
+    oscillatorOne.frequency.value = (f.TONICA)*2;
     oscillatorTwo.frequency.value = f.TERCA_MAIOR;
     oscillatorThree.frequency.value = f.QUINTA_JUSTA;
     oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
 };
+
+var ACORDE_MAIOR_BAIXO_SETIMA_MAIOR = function (f) {
+    oscillatorOne.frequency.value = (f.TONICA)*2;
+    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    oscillatorFour.frequency.value = (f.SETIMA_MAIOR)/2;
+};
+
 
 //ACORDES MENORES
 var ACORDE_MENOR = function (f) {
@@ -85,7 +93,7 @@ var ACORDE_MENOR_BAIXO_QUINTA = function (f) {
 };
 
 var ACORDE_MENOR_BAIXO_SETIMA_MENOR = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
+    oscillatorOne.frequency.value = (f.TONICA)*2;
     oscillatorTwo.frequency.value = f.TERCA_MENOR;
     oscillatorThree.frequency.value = f.QUINTA_JUSTA;
     oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
