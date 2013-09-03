@@ -6,13 +6,14 @@ _.each(sequenciaDeAcordes.split(' '), function(acorde) {
     vez++;
     _.delay(function(){
         var frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde.slice(0,1)]);
-        fazerBarulho();
+        var osciladores = fazerBarulho();
+        
         _.each(acordes, function(funcao, reAcorde) {
             if (acorde.match(reAcorde)) {
-                funcao(frequenciaDeReferencia);
+                funcao(frequenciaDeReferencia, osciladores);
             }
         });
-    }, vez*1500);
+    }, vez*1000);
 });
 
 document.getElementById('volumeOscilador').addEventListener('change', function () {

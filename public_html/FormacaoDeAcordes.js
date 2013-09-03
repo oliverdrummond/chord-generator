@@ -13,104 +13,104 @@ var re = {
 
 var acordes = {};
     
-acordes[re['ACORDE_MAIOR']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MAIOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MAIOR_COM_SETIMA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.SETIMA_MENOR;
+acordes[re['ACORDE_MAIOR_COM_SETIMA']] = function (f, os) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.SETIMA_MENOR;
 },
 
-acordes[re['ACORDE_MAIOR_COM_SETIMA_MAIOR']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.SETIMA_MAIOR;
+acordes[re['ACORDE_MAIOR_COM_SETIMA_MAIOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.SETIMA_MAIOR;
 },
 
 acordes[re['ACORDE_MAIOR_COM_NONA']] = function () {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.NONA_MAIOR;
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.NONA_MAIOR;
 },
 
-acordes[re['ACORDE_MAIOR_BAIXO_TERCA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = (f.TERCA_MAIOR)/2;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MAIOR_BAIXO_TERCA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = (f.TERCA_MAIOR)/2;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MAIOR_BAIXO_QUINTA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = (f.QUINTA_JUSTA)/2;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MAIOR_BAIXO_QUINTA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = (f.QUINTA_JUSTA)/2;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MAIOR_BAIXO_NONA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = (f.NONA_MAIOR)/2;
+acordes[re['ACORDE_MAIOR_BAIXO_NONA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = (f.NONA_MAIOR)/2;
 },
 
-acordes[re['ACORDE_MAIOR_BAIXO_SETIMA_MENOR']] = function (f) {
-    oscillatorOne.frequency.value = (f.TONICA)*2;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
+acordes[re['ACORDE_MAIOR_BAIXO_SETIMA_MENOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = (f.TONICA)*2;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
 },
 
-acordes[re['ACORDE_MAIOR_BAIXO_SETIMA_MAIOR']] = function (f) {
-    oscillatorOne.frequency.value = (f.TONICA)*2;
-    oscillatorTwo.frequency.value = f.TERCA_MAIOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = (f.SETIMA_MAIOR)/2;
+acordes[re['ACORDE_MAIOR_BAIXO_SETIMA_MAIOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = (f.TONICA)*2;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MAIOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = (f.SETIMA_MAIOR)/2;
 },
 
 
 //ACORDES MENORES
-acordes[re['ACORDE_MENOR']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MENOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MENOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MENOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MENOR_COM_SETIMA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MENOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.SETIMA_MENOR;
+acordes[re['ACORDE_MENOR_COM_SETIMA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MENOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.SETIMA_MENOR;
 },
 
-acordes[re['ACORDE_MENOR_BAIXO_TERCA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = (f.TERCA_MENOR)/2;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MENOR_BAIXO_TERCA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = (f.TERCA_MENOR)/2;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MENOR_BAIXO_QUINTA']] = function (f) {
-    oscillatorOne.frequency.value = f.TONICA;
-    oscillatorTwo.frequency.value = f.TERCA_MENOR;
-    oscillatorThree.frequency.value = (f.QUINTA_JUSTA)/2;
-    oscillatorFour.frequency.value = f.TONICA * 2;
+acordes[re['ACORDE_MENOR_BAIXO_QUINTA']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = f.TONICA;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MENOR;
+    osc.oscillatorThree.frequency.value = (f.QUINTA_JUSTA)/2;
+    osc.oscillatorFour.frequency.value = f.TONICA * 2;
 },
 
-acordes[re['ACORDE_MENOR_BAIXO_SETIMA_MENOR']] = function (f) {
-    oscillatorOne.frequency.value = (f.TONICA)*2;
-    oscillatorTwo.frequency.value = f.TERCA_MENOR;
-    oscillatorThree.frequency.value = f.QUINTA_JUSTA;
-    oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
+acordes[re['ACORDE_MENOR_BAIXO_SETIMA_MENOR']] = function (f, osc) {
+    osc.oscillatorOne.frequency.value = (f.TONICA)*2;
+    osc.oscillatorTwo.frequency.value = f.TERCA_MENOR;
+    osc.oscillatorThree.frequency.value = f.QUINTA_JUSTA;
+    osc.oscillatorFour.frequency.value = (f.SETIMA_MENOR)/2;
 }
 
 
