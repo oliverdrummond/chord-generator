@@ -1,17 +1,15 @@
 
-var acorde = prompt('Entre com o acorde');
-acorde = acorde.replace('#','_SUSTENIDO');
-acorde = acorde.toUpperCase();
-var frequenciaDeReferencia;
+var sequenciaDeAcordes = prompt('Entre com o acorde');
 
-fazerBarulho();
-if (acorde.indexOf("M") == -1){
-    frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde]);
-    ACORDE_MAIOR(frequenciaDeReferencia);
-} else {
-    frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde.substring(0,1)]);
-    ACORDE_MENOR(frequenciaDeReferencia);
-};
+_.each(sequenciaDeAcordes.split(' '), function(acorde) {
+    var frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde.slice(0,1)]);
+    fazerBarulho();
+    _.each(acordes, function(funcao, reAcorde) {
+        if (acorde.match(reAcorde)) {
+            funcao(frequenciaDeReferencia);
+        }
+    });
+});
 
 document.getElementById('volumeOscilador').addEventListener('change', function () {
     gainNode.gain.value = this.value;
