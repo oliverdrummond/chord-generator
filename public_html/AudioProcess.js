@@ -1,14 +1,18 @@
 
 var sequenciaDeAcordes = prompt('Entre com o acorde');
 
+var vez = 0;
 _.each(sequenciaDeAcordes.split(' '), function(acorde) {
-    var frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde.slice(0,1)]);
-    fazerBarulho();
-    _.each(acordes, function(funcao, reAcorde) {
-        if (acorde.match(reAcorde)) {
-            funcao(frequenciaDeReferencia);
-        }
-    });
+    vez++;
+    _.delay(function(){
+        var frequenciaDeReferencia = intervalosPara(NOTES_FREQUENCY[acorde.slice(0,1)]);
+        fazerBarulho();
+        _.each(acordes, function(funcao, reAcorde) {
+            if (acorde.match(reAcorde)) {
+                funcao(frequenciaDeReferencia);
+            }
+        });
+    }, vez*1500);
 });
 
 document.getElementById('volumeOscilador').addEventListener('change', function () {
